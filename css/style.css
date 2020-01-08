@@ -1,79 +1,29 @@
-body {
-	background: #FAEBD7 url('../images/background.jpeg');
-	color: #333;
-}
-
-a {
-	text-decoration: none;
-	color: #333;
-}
-
-a:hover { color: Tomato; }
-
-header, nav, main, footer {
-	width: 80%;
-	margin: auto;
-}
-
-
-/* Header styles */
-
-
-header h1 {
-	padding: 40px 60px;
-	font-family: 'Quicksand', sans-serif;
-	font-style: #82CBE8;
-	font-size: 40px; 
-	color: #8FFFB1;
-	text-align: center;
-}
-
-
-/* Nav styles */
-nav { background-color: lightpink; }
-nav ul { 
+.grid-4{
 	display: flex;
-	justify-content: flex-end;
-	font-family: 'Open Sans', sans-serif;
-}
-nav li { padding: 10px 10px; }
-nav a { color: black; }
-nav a:hover { color: blue; }
-
-
-
-/* Main styles */
-main { 
-	background-color: #C2DEFF;
-	display: grid;
-	grid-template-columns: 60% 40%;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 11px;
-	font-style: 'bold';
+	flex-wrap: wrap;
 }
 
-section {
-	padding: 40px 60px;
+.jq1,.jq2, .jq3, .jq4{
+	padding: 10%;
+	margin: 2%;
 }
 
-section ul, aside ul {
-	list-style-type: square;
-	margin-top: 20px; 
-	margin-left: 30px;
-	font-weight: 10px;
-
+.jq1{
+	background: red;
+}
+.jq2{
+	background: orange;
+}
+.jq3{
+	background: green;
+}
+.jq4{
+	background: pink;
 }
 
-aside {
-	padding: 40px 10px;
+@media only screen and (max-width: 600px) {
+.jq1,.jq2, .jq3, .jq4, .grid-4 {
+	margin: 20%;
+
+  }
 }
-
-
-
-/* Footer styles */
-footer { 
-	background-color: #000;
-	color: white;
-	text-align: center;
- }
- footer p { padding: 20px; }
