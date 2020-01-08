@@ -6,46 +6,15 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Sanchez&display=swap" rel="stylesheet">
 </head>
+
 <body>
-	<div class="buttons">
-		<button id="btn-fadeout"> 1 </button>
-		<button id="btn-fadein"> 2 </button>
-		<button id="btn-fadeout"> 3 </button>
-	</div>
-	<div class="grid-4">
-		<div class="jq1"></div>
-		<div class="jq2"></div>
-		<div class="jq3"></div>
-		<div class="jq4"></div>
-
-
-	<script>
-		$(document).ready(function(){
-			$('#jq1').click(function(){
-				$('#btn-fadeout').fadeOut(3000, function(){
-					$('#jq1').text('Its Gone');
-				});
-			});
-			$('#btnFadeIn').click(function(){
-				$('#box').fadeIn(3000);
-			});
-			$('#btnFadeTog').click(function(){
-				$('#box').fadeToggle(1000);
-			});
-			$('#btnSlideDown').click(function(){
-				$('#box').slideDown(3000);
-			});
-			$('#btnSlideUp').click(function(){
-				$('#box').slideUp(3000);
-			});
-			$('#btnSlideTog').click(function(){
-				$('#box').slideToggle(3000);
-			});
-			$('#btnStop').click(function(){
-				$('#box').stop();
-			});
-		
-	</script>
+  <div class="container">
+    <h1>I Need 
+      <span class="txt-type" data-wait="3000" data-words='["Margaritas", "A Vacation", "Money"]'></span>
+    </h1>
+    <h2>...and its only week one.</h2>
+  </div>
+  
   <script src="java.js"></script>
 </body>
 </html>
