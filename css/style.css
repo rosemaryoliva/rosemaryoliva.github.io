@@ -60,156 +60,223 @@ h2 {
 }
 
 
-/* Nav Styles */
-body
-{
-  margin: 0;
-  padding: 0;
-  
-  /* make it look decent enough */
+
+@media(min-width: 501px) {
+  .mobile-nav{
+     display: none;}
+
+  a{
+    text-decoration: none;
+    color: #888;
+  }
+
+  a:hover{
+    color: white;
+  }
+
+  .desktop-background{
+    margin: 0 auto;
+    max-width: 1000px;
+
+  }
+  .nav {
+    width: 100%;
+    height: 80px;
+    padding: 15px 0;
+    background-image: linear-gradient(-90deg, #fff, #eee);
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+    
+  }
+  .logo {
+    color: #888;
+    font-size: 40px;
+    float: left;
+  }
+  .nav-links {
+    text-align: right;
+  }
+  .nav-links li {
+
+    color: #888;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    -webkit-transition: all .8s; 
+    transition: all .8s;
+  }
+
+  .nav-links li.active {
+    background-color: #FFBEA1;
+  }
+
+  .nav-links li:hover {
+    background-color: #E89787;
+    color: white;
+    cursor: pointer;
+  }
+
+
+
+  }}
+
+
+
+
+@media(max-width: 500px) {
+
+  nav{
+  display: none;
 }
 
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
-}
+  body{
+    margin: 0;
+    padding: 0;
+    
+    /* make it look decent enough */
+  }
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
-}
+  #menuToggle
+  {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+  }
 
-#menuToggle a:hover
-{
-  border: 2px;
-  border-color: #B89797;
-  color: #B89797;
+  #menuToggle a
+  {
+    text-decoration: none;
+    color: #232323;
+    
+    transition: color 0.3s ease;
+  }
 
-}
+  #menuToggle a:hover
+  {
+    border: 2px;
+    border-color: #B89797;
+    color: #B89797;
+
+  }
 
 
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
+  #menuToggle input
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    
+    -webkit-touch-callout: none;
+  }
 
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #47332F;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: #47332F;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
 
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
+  #menuToggle span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
 
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
 
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu
+  {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
 
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
+  #menu li
+  {
+    padding: 10px 0;
+    font-size: 22px;
+  }
 
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+  }
+  }
