@@ -37,8 +37,7 @@ describe('Waypoint Sticky Shortcut', function() {
           element: $container[0],
           onBeforePageLoad: beforeSpy,
           onAfterPageLoad: afterSpy
-        })
-        $scroller.scrollTop(Waypoint.viewportHeight() - $container.height())
+c        $scroller.scrollTop(Waypoint.viewportHeight() - $container.height())
       })
       waitsFor(function() {
         return $('.infinite-container > .infinite-item').length > $items.length

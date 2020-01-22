@@ -2,11 +2,12 @@
 <html>
 <head>
 	<title>Waypoints</title>
+	<link rel="stylesheet" href="animate.css">
 </head>
 <body>
 
 	<main class="infinite-container"></main>
-	<section class="infinite-item">		
+	<section class="rubberBand">		
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</section>
 
@@ -15,8 +16,7 @@
 		</section>
 
 		<section class="infinite-item">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</section>
+    	</section>
 
 		<section class="infinite-item">
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -24,6 +24,32 @@
 
 	</main>
 
+<script src="shortcuts/infinite.js"></script>
+
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script>
+	
+  function testAnim(x) {
+    $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass();
+    });
+  };
+
+  $(document).ready(function(){
+    $('.js--triggerAnimation').click(function(e){
+      e.preventDefault();
+      var anim = $('.js--animations').val();
+      testAnim(anim);
+    });
+
+    $('.js--animations').change(function(){
+      var anim = $(this).val();
+      testAnim(anim);
+    });
+  });
+
+</script>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -33,8 +59,8 @@
 <script src="/path/to/lib/jquery.waypoints.min.js"></script>
 
 <script>
-var infinite = new Waypoint.Infinite({
-  element: $('.infinite-container')[0]
+  var infinite = new Waypoint.Infinite({
+   element: $('.infinite-container')[0]
 })
 </script>
 </body>
