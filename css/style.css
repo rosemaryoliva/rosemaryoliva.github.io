@@ -6,6 +6,8 @@ header{
   overflow:hidden;
 }
 
+
+
 body {
   width: 100vw;
   height: 100vh;
@@ -49,7 +51,7 @@ h2 {
 
 @media(max-width: 800px) {
   .container {
-    padding: 0 1rem;
+   flex-shrink: inherit;
   }
 
   h1 {
